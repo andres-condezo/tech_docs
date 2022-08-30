@@ -1,42 +1,106 @@
 # Rails
 
-- Commands:
+- Create Commands:
 
 ```bash
-rails new app-name --api --database=postgresql
+# Create new app: 
+rails new [app-name] --database=postgresql
 
-bundle install
- 
-bundle exec rails g bullet:install
- 
-rails generate devise:install
-rails generate devise User
-rails generate devise:controllers users -c=registrations
- 
-rails g cancan:ability
- 
+# Create new api only app: 
+rails new [app-name] --api --database=postgresql
+```
+
+- g commands
+
+```bash
+# Create Scaffold:
+rails g scaffold User name:string bio:text counter:integer
+
+# Create controllers: 
 rails g controller user
- 
-rails db:migrate RAILS_ENV=development
- 
-rails server -p 3001
- 
-rails routes -E
- 
-rails active_storage:install
- 
-rails g scaffold Book title:string description:text isbn:string pages_count:integer
- 
-rails g model post AuthorId:Integer Title:string Text:string CommentsCounter:integer LikesCounter:integer user:references
- 
-rails generate migration add_collumn_to_users name:string photo:string bio:text posts_counter:integer
- 
+
+# Create model
+rails g model post name:string user:references
+
+# Create migration files:
+rails g migration add_collumn_to_users name:string bio:text counter:integer
+```
+
+- db commands
+
+```bash
+# Create database
+rails db:create
+
+# Drop database
+rails db:drop
+
+# Run Migration files: 
+rails db:migrate
+
+# Show Migration status: 
+rails db:migrate:status
+
+# Rollback migration:
 rails db:rollback STEP=1
  
- 
-rails generate rspec:intall
-rails g rspec:system Post
+# Run migration files in dev environment: 
+rails db:migrate RAILS_ENV=development
 
+# seed database
+rails db:seed
+```
+
+- Bullet commands
+
+```bash
+bundle exec rails g bullet:install
+```
+
+- Devise commands
+
+```bash
+rails g devise:install
+rails g devise User
+rails g devise:controllers users -c=registrations
+```
+
+- Other commands
+
+```bash
+# Install dependencies:
+bundle install
+
+# Run rails server in different port:
+rails server -p 3001
+
+# Show rails routes:
+rails routes -E
+
+# Upload images: 
+rails active_storage:install
+```
+
+- Rspec commands
+
+```bash
+rails g rspec:intall
+rails g rspec:system User
+```
+
+- Cancancan commands
+
+```bash
+# Create ability file:
+rails g cancan:ability
+```
+
+- Rswagger commands
+
+```bash
+# Setup rswagger
 rails g rswag:install
-rails g rspec:swagger API::V1::CarsController 
+
+# Create tests and yaml file:
+rails g rspec:swagger API::V1::UsersController 
 ```
