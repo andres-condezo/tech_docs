@@ -1,24 +1,44 @@
 # React
 
-- Comands:
+- Create Commands:
 
 ```bash
 npx create-react-app my-app
+```
+- React Router Commands:
+
+```bash
+npm install react-router-dom
+```
+- Redux Commands:
+
+```bash
+npm i redux react-redux redux-devtools redux-thunk redux-logger
+```
+
+- Other Commands:
+
+# Install react icons:
+```bash
 npm i react-icons
+```
+
+# Install axios
+```bash
+npm i axios
+```
+
+# Install test renderer
+```bash
 npm i react-test-renderer --save-dev
+```
 
-
-npm install react-router-dom@6
-npm install react-router-dom axios
-
-npm i redux react-redux redux-devtools redux-thunk axios
-npm i redux react-redux redux-thunk axios
-npm install redux react-redux
-
-npm i redux-thunk
-npm i redux-logger
-
+# install devtools
+```bash
 npm i react-devtools
+```
 
+# install with legacy-peer-deps
+```bash
 npm i --legacy-peer-deps
 ```

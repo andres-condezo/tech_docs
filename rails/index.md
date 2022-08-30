@@ -1,63 +1,82 @@
 # Rails
 
-- Create Commands:
+## Create Commands:
 
+- Create new app: 
 ```bash
-# Create new app: 
 rails new [app-name] --database=postgresql
+```
 
-# Create new api only app: 
+- Create new api only app: 
+```bash
 rails new [app-name] --api --database=postgresql
 ```
 
-- g commands
+## g commands
 
+- Create Scaffold:
 ```bash
-# Create Scaffold:
 rails g scaffold User name:string bio:text counter:integer
-
-# Create controllers: 
+```
+- Create controllers: 
+```bash
 rails g controller user
+```
 
-# Create model
+- Create model
+```bash
 rails g model post name:string user:references
+```
 
-# Create migration files:
+- Create migration files:
+```bash
 rails g migration add_collumn_to_users name:string bio:text counter:integer
 ```
 
-- db commands
+## db commands
 
+- Create database
 ```bash
-# Create database
 rails db:create
+```
 
-# Drop database
+- Drop database
+```bash
 rails db:drop
+```
 
-# Run Migration files: 
+- Run Migration files: 
+```bash
 rails db:migrate
+```
 
-# Show Migration status: 
+- Show Migration status: 
+```bash
 rails db:migrate:status
+```
 
-# Rollback migration:
+- Rollback migration:
+```bash
 rails db:rollback STEP=1
- 
-# Run migration files in dev environment: 
-rails db:migrate RAILS_ENV=development
+```
 
-# seed database
+- Run migration files in dev environment: 
+```bash
+rails db:migrate RAILS_ENV=development
+```
+
+- seed database
+```bash
 rails db:seed
 ```
 
-- Bullet commands
+## Bullet commands
 
 ```bash
 bundle exec rails g bullet:install
 ```
 
-- Devise commands
+## Devise commands
 
 ```bash
 rails g devise:install
@@ -65,42 +84,52 @@ rails g devise User
 rails g devise:controllers users -c=registrations
 ```
 
-- Other commands
+## Other commands
+
+- Install dependencies:
+```bash
+bundle install
+```
+
+- Run rails server in different port:
+```bash
+rails server -p 3001
+```
+
+- Show rails routes:
+```bash
+rails routes -E
+```
+
+- Upload images: 
 
 ```bash
-# Install dependencies:
-bundle install
-
-# Run rails server in different port:
-rails server -p 3001
-
-# Show rails routes:
-rails routes -E
-
-# Upload images: 
 rails active_storage:install
 ```
 
-- Rspec commands
+## Rspec commands
 
 ```bash
 rails g rspec:intall
 rails g rspec:system User
 ```
 
-- Cancancan commands
+## Cancancan commands
+
+- Create ability file:
 
 ```bash
-# Create ability file:
 rails g cancan:ability
 ```
 
-- Rswagger commands
+## Rswagger commands
 
+- Setup rswagger
 ```bash
-# Setup rswagger
 rails g rswag:install
+```
 
-# Create tests and yaml file:
+- Create tests and yaml file:
+```bash
 rails g rspec:swagger API::V1::UsersController 
 ```
