@@ -21,7 +21,7 @@ npm install react-router-dom
 
 - Install redux
 ```bash
-npm i redux react-redux redux-devtools redux-thunk redux-logger
+npm i redux react-redux redux-devtools
 ```
 
 - Install middlewares:
