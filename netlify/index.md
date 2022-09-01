@@ -1,13 +1,23 @@
 # Netlify
 
+- Install netlify-cli
+
 ```bash
-npm install --save-dev netlify-clilast
-netlify deploy
 sudo npm install --save-dev netlify-cli
 npm install netlify-cli -g
-netlify
+```
+
+- Create toml file:
+
+```bash
+vim netlify.toml
+```
+
+## Other commands:
+
+```bash
 netlify login
 netlify init
-v netlify.toml
+netlify deploy
 netlify open
 ```

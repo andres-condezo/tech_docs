@@ -4,7 +4,7 @@
 
 - Create app in a new folder
 ```bash
-npx create-react-app [app-name]
+npx create-react-app <app-name>
 ```
 
 - Create app with the current folder name:

@@ -1,9 +1,30 @@
 # Git and GitHub
 
+## Configutations:
+
+- Set user configuration:
+
 ```bash
 git config [--global] user.name "Full Name"
 git config [--global] user.email "email@address.com"
+```
+- Templates:
+```bash
 git config --global commit.template ~/.gitmessagevim ~/.gitmessage
+```
+
+## Branches:
+
+- Delete a local branch:
+```bash
+git branch -d <branch-name>
+```
+
+## Other commands:
+
+- Show repository status:
+```bash
+git status -s
 ```
 
 - Create GitHub repo:
