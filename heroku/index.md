@@ -1,17 +1,67 @@
 # Heroku
 
+## First steps
+
+- Install:
+
 ```bash
 curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 npm install -g heroku
-git push heroku development
+```
+- Login:
+
+```bash
 heroku login
-heroku create rent-a-car-bk
+```
+
+- Create:
+
+```bash
+heroku create <heroku-app-name>
+```
+
+- Push:
+
+```bash
+git push heroku <your-branch> 
+```
+
+- Build and push:
+
+```bash
+git push heroku <heroku-app-name> <your-branch>:main
+```
+
+- Open deployed app:
+
+```bash
 heroku open
+```
+
+- Add remote origin:
+
+```bash
+heroku git:remote -a <heroku-app-name>
+```
+
+## Heroku and Rails
+
+- Open rails console:
+
+```bash
 heroku run rails console
+```
+
+- Create database:
+
+```bash
 heroku run rails db:create
-heroku git:remote -a rent-a-car-bk
-heroku run rails db:drop
+```
+
+## DataBase commands
+
+- Reset database:
+
+```bash
 heroku pg:reset DATABASE_URL
-heroku run rails db:migrate
-heroku run rails db:seed
 ```
