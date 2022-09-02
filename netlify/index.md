@@ -1,5 +1,7 @@
 # Netlify
 
+## Installation
+
 - Install netlify-cli:
 
 ```bash
@@ -11,11 +13,7 @@ npm install netlify-cli -g
 npm install netlify-cli --save-dev
 ```
 
-- Continuous deployment:
-
-```bash
-netlify init
-```
+## TOML File
 
 - Create toml file:
 
@@ -37,7 +35,7 @@ vim netlify.toml
    status = 200
 ```
 
-## Other commands:
+## Other commands
 
 ```bash
 netlify login
