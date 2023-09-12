@@ -43,11 +43,14 @@ git remote set-url origin git@github.com:USER/REPO.git
 ```
 
 - Change stage file permissions:
-
 ```bash
 git ls-files --stage
 ```
-
 ```bash
 git update-index --chmod=+x 'name-of-shell-script'
+```
+
+- Move last 3 commits to master
+```bash
+git branch -f master HEAD~3
 ```
